@@ -42,31 +42,7 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Emby-logo.png" alt="Emby Logo" style="width: 300px;">
         <h1>Emby Server Status</h1>
         <p>Our server is currently down for maintenance. We apologize for the inconvenience and are working to bring it back online as soon as possible.</p>
-        <p id="countdown">Estimated time until restoration: <span id="time">30:00</span> minutes.</p>
+        <p>Server expected to be back online at: <strong>22:00 (10 PM)</strong></p>
     </div>
-    <script>
-        function startTimer(duration, display) {
-            var timer = duration, minutes, seconds;
-            setInterval(function () {
-                minutes = parseInt(timer / 60, 10);
-                seconds = parseInt(timer % 60, 10);
-
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                display.textContent = minutes + ":" + seconds;
-
-                if (--timer < 0) {
-                    display.textContent = "Maintenance is over, please try accessing the server now.";
-                }
-            }, 1000);
-        }
-
-        window.onload = function () {
-            var thirtyMinutes = 60 * 30, // 30 minutes
-                display = document.querySelector('#time');
-            startTimer(thirtyMinutes, display);
-        };
-    </script>
 </body>
 </html>
